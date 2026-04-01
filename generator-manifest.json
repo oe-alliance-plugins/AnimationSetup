@@ -1,0 +1,18 @@
+{
+  "branch": "main",
+  "depends_recipe": "",
+  "description_control": "",
+  "description_recipe": "",
+  "history_source_dir": "AnimationSetup",
+  "internal_package_name": "enigma2-plugin-systemplugins-animation-setup",
+  "module_dir_name": "AnimationSetup",
+  "output_subdir": "AnimationSetup",
+  "package_name": "enigma2-plugin-systemplugins-animation-setup",
+  "plugin_src_rel": "AnimationSetup",
+  "python_package": "AnimationSetup",
+  "rdepends_recipe": "",
+  "replaces": "",
+  "repo_name": "AnimationSetup",
+  "rrecommends": "",
+  "rreplaces": ""
+}
