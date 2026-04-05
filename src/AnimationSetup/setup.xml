@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<setupxml>
+	<setup key="animationsetup" title="Animation Settings" allowDefault="1">
+		<item level="0" text="Animation Speed" description="Adjust the speed of UI animations">config.misc.window_animation_speed</item>
+	</setup>
+</setupxml>

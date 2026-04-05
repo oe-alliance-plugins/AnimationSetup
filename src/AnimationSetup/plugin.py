@@ -1,90 +1,34 @@
-from Screens.Screen import Screen
-from Screens.MessageBox import MessageBox
+from enigma import setAnimation_current, setAnimation_speed
 from Components.ActionMap import ActionMap
-from Components.ConfigList import ConfigListScreen
+from Components.config import ConfigNumber, ConfigSelectionNumber, config
 from Components.MenuList import MenuList
 from Components.Sources.StaticText import StaticText
-from Components.config import config, ConfigNumber, ConfigSelectionNumber, getConfigListEntry
+from Screens.MessageBox import MessageBox
+from Screens.Screen import Screen
+from Screens.Setup import Setup
 from Plugins.Plugin import PluginDescriptor
 
-from enigma import setAnimation_current, setAnimation_speed
+from . import _
 
 # default = slide to left
-g_default = {
+G_DEFAULT = {
 		"current": 6,
 		"speed": 20,
 }
-g_max_speed = 30
+G_MAX_SPEED = 30
 
-config.misc.window_animation_default = ConfigNumber(default=g_default["current"])
-config.misc.window_animation_speed = ConfigSelectionNumber(1, g_max_speed, 1, default=g_default["speed"])
+config.misc.window_animation_default = ConfigNumber(default=G_DEFAULT["current"])
+config.misc.window_animation_speed = ConfigSelectionNumber(1, G_MAX_SPEED, 1, default=G_DEFAULT["speed"])
 
 
-class AnimationSetupConfig(ConfigListScreen, Screen):
-	skin = """
-		<screen position="center,center" size="600,140" title="Animation Settings">
-			<widget name="config" position="0,0" size="600,100" scrollbarMode="showOnDemand" />
-
-			<ePixmap pixmap="skin_default/buttons/red.png" position="0,100" size="140,40" alphatest="on" />
-			<ePixmap pixmap="skin_default/buttons/green.png" position="140,100" size="140,40" alphatest="on" />
-			<ePixmap pixmap="skin_default/buttons/yellow.png" position="280,100" size="140,40" alphatest="on" />
-
-			<widget source="key_red" render="Label" position="0,100" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#9f1313" transparent="1" />
-			<widget source="key_green" render="Label" position="140,100" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#1f771f" transparent="1" />
-			<widget source="key_yellow" render="Label" position="280,100" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#a08500" transparent="1" />
-		</screen>
-		"""
-
+class AnimationSetupConfig(Setup):
 	def __init__(self, session):
-		self.session = session
-		self.entrylist = []
+		Setup.__init__(self, session, "animationsetup", plugin="SystemPlugins/AnimationSetup", PluginLanguageDomain="AnimationSetup")
+		self.onClose.append(self.onConfigClose)
 
-		Screen.__init__(self, session)
-		ConfigListScreen.__init__(self, self.entrylist)
-
-		self["actions"] = ActionMap(["OkCancelActions", "ColorActions", ], {
-			"ok": self.keyGreen,
-			"green": self.keyGreen,
-			"yellow": self.keyYellow,
-			"red": self.keyRed,
-			"cancel": self.keyRed,
-		}, -2)
-		self["key_red"] = StaticText(_("Cancel"))
-		self["key_green"] = StaticText(_("Save"))
-		self["key_yellow"] = StaticText(_("Default"))
-
-		self.makeConfigList()
-		self.onLayoutFinish.append(self.layoutFinished)
-
-	def layoutFinished(self):
-		self.setTitle(_('Animation Setup'))
-
-	def keyGreen(self):
-		config.misc.window_animation_speed.save()
-		setAnimation_speed(int(config.misc.window_animation_speed.value))
-		self.close()
-
-	def keyRed(self):
-		config.misc.window_animation_speed.cancel()
-		self.close()
-
-	def keyYellow(self):
-		global g_default
-		config.misc.window_animation_speed.value = g_default["speed"]
-		self.makeConfigList()
-
-	def keyLeft(self):
-		ConfigListScreen.keyLeft(self)
-
-	def keyRight(self):
-		ConfigListScreen.keyRight(self)
-
-	def makeConfigList(self):
-		self.entrylist = []
-		entrySpeed = getConfigListEntry(_("Animation Speed"), config.misc.window_animation_speed)
-		self.entrylist.append(entrySpeed)
-		self["config"].list = self.entrylist
-		self["config"].l.setList(self.entrylist)
+	def onConfigClose(self):
+		# Apply animation speed when closing
+		setAnimation_speed(config.misc.window_animation_speed.value)
 
 
 class AnimationSetupScreen(Screen):
@@ -121,7 +65,7 @@ class AnimationSetupScreen(Screen):
 		self.skin = AnimationSetupScreen.skin
 		Screen.__init__(self, session)
 
-		self.animationList = []
+		self.animation_list = []
 
 		self["introduction"] = StaticText(_("* current animation"))
 		self["key_red"] = StaticText(_("Cancel"))
@@ -138,7 +82,7 @@ class AnimationSetupScreen(Screen):
 				"blue": self.preview
 			}, -3)
 
-		self["list"] = MenuList(self.animationList)
+		self["list"] = MenuList(self.animation_list)
 
 		self.onLayoutFinish.append(self.layoutFinished)
 
@@ -148,7 +92,7 @@ class AnimationSetupScreen(Screen):
 			key = x.get("idx", 0)
 			name = x.get("name", "??")
 			if key == config.misc.window_animation_default.value:
-				name = "* %s" % (name)
+				name = f"* {name}"
 			items.append((name, key))
 
 		self["list"].setList(items)
@@ -177,18 +121,18 @@ class AnimationSetupScreen(Screen):
 			self.session.open(MessageBox, current[0], MessageBox.TYPE_INFO, timeout=3)
 
 
-def animationSetupMain(session, **kwargs):
+def animation_setup_main(session, **kwargs):
 	session.open(AnimationSetupScreen)
 
 
-def startAnimationSetup(menuid):
+def start_animation_setup(menuid):
 	if menuid != "system":
 		return []
 
-	return [(_("Animations"), animationSetupMain, "animation_setup", None)]
+	return [(_("Animations"), animation_setup_main, "animation_setup", None)]
 
 
-def sessionAnimationSetup(session, reason, **kwargs):
+def session_animation_setup(session, reason, **kwargs):
 	setAnimation_current(config.misc.window_animation_default.value)
 	setAnimation_speed(int(config.misc.window_animation_speed.value))
 
@@ -200,9 +144,9 @@ def Plugins(**kwargs):
 			description="Setup UI animations",
 			where=PluginDescriptor.WHERE_MENU,
 			needsRestart=False,
-			fnc=startAnimationSetup),
+			fnc=start_animation_setup),
 		PluginDescriptor(
 			where=PluginDescriptor.WHERE_SESSIONSTART,
 			needsRestart=False,
-			fnc=sessionAnimationSetup)
+			fnc=session_animation_setup)
 	]
