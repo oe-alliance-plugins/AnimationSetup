@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AnimationSetup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-30 19:14+0200\n"
+"POT-Creation-Date: 2026-04-05 18:55+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Rob van der Does <RobvanderDoes@Gmail.com>\n"
 "Language-Team: openATV\n"
@@ -16,56 +16,74 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: ../plugin.py:70
 msgid "* current animation"
 msgstr "* huidige animatie"
 
+#: ../setup.xml
+msgid "Adjust the speed of UI animations"
+msgstr ""
+
+#: ../setup.xml
 msgid "Animation Setup"
 msgstr "Animatie-instellingen"
 
+#: ../setup.xml
 msgid "Animation Speed"
 msgstr "Animatiesnelheid"
 
+#: ../plugin.py:132
 msgid "Animations"
 msgstr "Animaties"
 
+#: ../plugin.py:71
 msgid "Cancel"
 msgstr "Annuleer"
 
-msgid "Default"
-msgstr "Standaard"
-
+#: ../plugin.py:36
 msgid "Disable Animations"
 msgstr "Schakel animaties uit"
 
+#: ../plugin.py:38
 msgid "Grow drop"
 msgstr "Groei verlaging"
 
+#: ../plugin.py:39
 msgid "Grow from left"
 msgstr "Groei van links"
 
+#: ../plugin.py:40
 msgid "Popup"
 msgstr "Popup"
 
+#: ../plugin.py:74
 msgid "Preview"
 msgstr "Voorbeeld"
 
+#: ../plugin.py:72
 msgid "Save"
 msgstr "Sla op"
 
+#: ../plugin.py:73
 msgid "Setting"
 msgstr "Instelling"
 
+#: ../plugin.py:37
 msgid "Simple fade"
 msgstr "Eenvoudige vervagen"
 
+#: ../plugin.py:41
 msgid "Slide drop"
 msgstr "Schuiven verminder"
 
+#: ../plugin.py:42
 msgid "Slide left to right"
 msgstr "Schuiven Links naar Rechts"
 
+#: ../plugin.py:43
 msgid "Slide top to bottom"
 msgstr "Schuiven boven naar beneden"
 
+#: ../plugin.py:44
 msgid "Stripes"
 msgstr "Strepen"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AnimationSetup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-30 19:14+0200\n"
+"POT-Creation-Date: 2026-04-05 18:55+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: litvcom\n"
 "Language-Team: \n"
@@ -16,56 +16,74 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: ../plugin.py:70
 msgid "* current animation"
 msgstr "* Поточна анімація"
 
+#: ../setup.xml
+msgid "Adjust the speed of UI animations"
+msgstr ""
+
+#: ../setup.xml
 msgid "Animation Setup"
 msgstr "Налаштування анімації"
 
+#: ../setup.xml
 msgid "Animation Speed"
 msgstr "Швидкість анімації"
 
+#: ../plugin.py:132
 msgid "Animations"
 msgstr "Анімація"
 
+#: ../plugin.py:71
 msgid "Cancel"
 msgstr "Скасувати"
 
-msgid "Default"
-msgstr "За замовчуванням"
-
+#: ../plugin.py:36
 msgid "Disable Animations"
 msgstr "Вимкнення анімації"
 
+#: ../plugin.py:38
 msgid "Grow drop"
 msgstr "Збільшення знизу"
 
+#: ../plugin.py:39
 msgid "Grow from left"
 msgstr "Збільшення зліва"
 
+#: ../plugin.py:40
 msgid "Popup"
 msgstr "Спливання"
 
+#: ../plugin.py:74
 msgid "Preview"
 msgstr "Перегляд"
 
+#: ../plugin.py:72
 msgid "Save"
 msgstr "Зберегти"
 
+#: ../plugin.py:73
 msgid "Setting"
 msgstr "Налаштування"
 
+#: ../plugin.py:37
 msgid "Simple fade"
 msgstr "Просте згасання"
 
+#: ../plugin.py:41
 msgid "Slide drop"
 msgstr "Слайд донизу"
 
+#: ../plugin.py:42
 msgid "Slide left to right"
 msgstr "Слайд зліва направо"
 
+#: ../plugin.py:43
 msgid "Slide top to bottom"
 msgstr "Слайд згори донизу"
 
+#: ../plugin.py:44
 msgid "Stripes"
 msgstr "Смуги"

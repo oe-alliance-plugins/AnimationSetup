@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-23 15:19+0200\n"
+"POT-Creation-Date: 2026-04-05 18:55+0200\n"
 "PO-Revision-Date: 2019-07-23 15:34+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,56 +18,74 @@ msgstr ""
 "X-Generator: Poedit 2.2\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: ../plugin.py:70
 msgid "* current animation"
 msgstr "* animation courante"
 
+#: ../setup.xml
+msgid "Adjust the speed of UI animations"
+msgstr ""
+
+#: ../setup.xml
 msgid "Animation Setup"
 msgstr "Paramètres animation"
 
+#: ../setup.xml
 msgid "Animation Speed"
 msgstr "Vitesse de l’animation"
 
+#: ../plugin.py:132
 msgid "Animations"
 msgstr "Animations"
 
+#: ../plugin.py:71
 msgid "Cancel"
 msgstr "Annuler"
 
-msgid "Default"
-msgstr "Par défaut"
-
+#: ../plugin.py:36
 msgid "Disable Animations"
 msgstr "Désactiver animations"
 
+#: ../plugin.py:38
 msgid "Grow drop"
 msgstr "Apparaître du bas"
 
+#: ../plugin.py:39
 msgid "Grow from left"
 msgstr "Apparaître de la gauche"
 
+#: ../plugin.py:40
 msgid "Popup"
 msgstr "Apparaître"
 
+#: ../plugin.py:74
 msgid "Preview"
 msgstr "Aperçu"
 
+#: ../plugin.py:72
 msgid "Save"
 msgstr "Sauver"
 
+#: ../plugin.py:73
 msgid "Setting"
 msgstr "Paramètre"
 
+#: ../plugin.py:37
 msgid "Simple fade"
 msgstr "Fondu simple"
 
+#: ../plugin.py:41
 msgid "Slide drop"
 msgstr "Diapo tombe"
 
+#: ../plugin.py:42
 msgid "Slide left to right"
 msgstr "Diapo de gauche à droite"
 
+#: ../plugin.py:43
 msgid "Slide top to bottom"
 msgstr "Défiler de haut en bas"
 
+#: ../plugin.py:44
 msgid "Stripes"
 msgstr "Bandes"

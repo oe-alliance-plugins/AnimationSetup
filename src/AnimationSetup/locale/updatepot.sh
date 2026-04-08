@@ -73,6 +73,10 @@ if [ -f "${PLUGIN_DOMAIN}.pot" ]; then
 	printf "Backup created: %s.pot.bak\n" "$PLUGIN_DOMAIN"
 fi
 
+printf "Getting list of languages\n"
+languages=($(ls *.po 2>/dev/null | $localgsed 's/\.po$//g'))
+
+
 printf "Creating temporary file %s-py.pot\n" "$PLUGIN_DOMAIN"
 find $findoptions .. -name "*.py" -exec xgettext --no-wrap -L Python --from-code=UTF-8 -kpgettext:1c,2 --add-comments="TRANSLATORS:" -d "$PLUGIN_DOMAIN" --package-name="$PLUGIN_DOMAIN" -s -o ${PLUGIN_DOMAIN}-py.pot {} \+
 $localgsed --in-place ${PLUGIN_DOMAIN}-py.pot --expression=s/CHARSET/UTF-8/
@@ -85,7 +89,7 @@ else
 	find $findoptions .. -name "*.xml" -exec python3 xml2po.py {} \+ > ${PLUGIN_DOMAIN}-xml.pot
 fi
 printf "Merging pot files to create: %s.pot\n" "$PLUGIN_DOMAIN"
-cat ${PLUGIN_DOMAIN}-py.pot ${PLUGIN_DOMAIN}-xml.pot | msguniq -s --no-wrap --no-location -o ${PLUGIN_DOMAIN}.pot -
+cat ${PLUGIN_DOMAIN}-py.pot ${PLUGIN_DOMAIN}-xml.pot | msguniq -s --no-wrap -o ${PLUGIN_DOMAIN}.pot -
 printf "remove temp pot files\n"
 rm ${PLUGIN_DOMAIN}-py.pot ${PLUGIN_DOMAIN}-xml.pot
 
@@ -101,6 +105,18 @@ if [ -f "${PLUGIN_DOMAIN}.pot.bak" ]; then
 	else
 		printf "Content changes detected, keeping new pot file\n"
 		rm "${PLUGIN_DOMAIN}.pot.bak"
+
+		for lang in "${languages[@]}" ; do
+			if [ -f $lang.po ]; then 
+				printf "Updating existing translation file %s.po\n" $lang
+				msgmerge --backup=none --no-wrap -s -U $lang.po ${PLUGIN_DOMAIN}.pot && touch $lang.po
+				msgattrib --no-wrap --no-obsolete $lang.po -o $lang.po
+			else
+				printf "New file created: %s, please add it to github before commit\n" $lang.po
+				msginit -l $lang.po -o $lang.po -i ${PLUGIN_DOMAIN}.pot --no-translator
+			fi
+		done
+
 	fi
 	
 	# Clean up temp files

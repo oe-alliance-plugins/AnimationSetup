@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AnimationSetup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-30 19:14+0200\n"
+"POT-Creation-Date: 2026-04-05 18:55+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Vytenis P. <vyteniui@gmail.com>\n"
 "Language-Team: Vytenis P. vyteniui@gmail.com\n"
@@ -16,56 +16,74 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: ../plugin.py:70
 msgid "* current animation"
 msgstr "* dabartinė animacija"
 
+#: ../setup.xml
+msgid "Adjust the speed of UI animations"
+msgstr ""
+
+#: ../setup.xml
 msgid "Animation Setup"
 msgstr "Animacijos sąranka"
 
+#: ../setup.xml
 msgid "Animation Speed"
 msgstr "Animacijos greitis"
 
+#: ../plugin.py:132
 msgid "Animations"
 msgstr "Langų animacija"
 
+#: ../plugin.py:71
 msgid "Cancel"
 msgstr "Atšaukti"
 
-msgid "Default"
-msgstr "Numatyta"
-
+#: ../plugin.py:36
 msgid "Disable Animations"
 msgstr "išjungti animacijas"
 
+#: ../plugin.py:38
 msgid "Grow drop"
 msgstr "nusileisti-iškilti"
 
+#: ../plugin.py:39
 msgid "Grow from left"
 msgstr "išslysti iš kairės"
 
+#: ../plugin.py:40
 msgid "Popup"
 msgstr "iškilti"
 
+#: ../plugin.py:74
 msgid "Preview"
 msgstr "Peržiūra"
 
+#: ../plugin.py:72
 msgid "Save"
 msgstr "Išsaugoti"
 
+#: ../plugin.py:73
 msgid "Setting"
 msgstr "Nustatymas"
 
+#: ../plugin.py:37
 msgid "Simple fade"
 msgstr "tiesiog išblukti"
 
+#: ../plugin.py:41
 msgid "Slide drop"
 msgstr "sklandžiai išslysti"
 
+#: ../plugin.py:42
 msgid "Slide left to right"
 msgstr "iš kairės į dešinę"
 
+#: ../plugin.py:43
 msgid "Slide top to bottom"
 msgstr "iš viršaus žemyn"
 
+#: ../plugin.py:44
 msgid "Stripes"
 msgstr "juostos"

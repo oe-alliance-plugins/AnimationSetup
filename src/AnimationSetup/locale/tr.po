@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AnimationSetup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-30 19:14+0200\n"
+"POT-Creation-Date: 2026-04-05 18:55+0200\n"
 "PO-Revision-Date: 2017-03-10 14:31+0200\n"
 "Last-Translator: esmos <kucukogul@gmail.com>\n"
 "Language-Team: Turkish <sunder67@hotmail.com>\n"
@@ -17,56 +17,74 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: ../plugin.py:70
 msgid "* current animation"
 msgstr "* mevcut animasyon"
 
+#: ../setup.xml
+msgid "Adjust the speed of UI animations"
+msgstr ""
+
+#: ../setup.xml
 msgid "Animation Setup"
 msgstr "Animasyon Kurulumu"
 
+#: ../setup.xml
 msgid "Animation Speed"
 msgstr "Animasyon Hızı"
 
+#: ../plugin.py:132
 msgid "Animations"
 msgstr "Animasyonlar"
 
+#: ../plugin.py:71
 msgid "Cancel"
 msgstr "Çıkış"
 
-msgid "Default"
-msgstr "Varsayılan"
-
+#: ../plugin.py:36
 msgid "Disable Animations"
 msgstr "Animasyonları Devre Dışı Bırak"
 
+#: ../plugin.py:38
 msgid "Grow drop"
 msgstr "Damla büyüme"
 
+#: ../plugin.py:39
 msgid "Grow from left"
 msgstr "Soldan büyüme"
 
+#: ../plugin.py:40
 msgid "Popup"
 msgstr "Açılır pencere"
 
+#: ../plugin.py:74
 msgid "Preview"
 msgstr "Önizleme"
 
+#: ../plugin.py:72
 msgid "Save"
 msgstr "Kaydet"
 
+#: ../plugin.py:73
 msgid "Setting"
 msgstr "Ayarlar"
 
+#: ../plugin.py:37
 msgid "Simple fade"
 msgstr "Basit solma"
 
+#: ../plugin.py:41
 msgid "Slide drop"
 msgstr "Kayar damla"
 
+#: ../plugin.py:42
 msgid "Slide left to right"
 msgstr "Soldan sağa kaydır"
 
+#: ../plugin.py:43
 msgid "Slide top to bottom"
 msgstr "Yukarıdan aşağıya kaydır"
 
+#: ../plugin.py:44
 msgid "Stripes"
 msgstr "Şeritler (Çizgili)"

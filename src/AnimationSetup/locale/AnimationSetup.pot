@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AnimationSetup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-05 18:20+0200\n"
+"POT-Creation-Date: 2026-04-05 18:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,56 +17,74 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: ../plugin.py:70
 msgid "* current animation"
 msgstr ""
 
+#: ../setup.xml
 msgid "Adjust the speed of UI animations"
 msgstr ""
 
+#: ../setup.xml
 msgid "Animation Setup"
 msgstr ""
 
+#: ../setup.xml
 msgid "Animation Speed"
 msgstr ""
 
+#: ../plugin.py:132
 msgid "Animations"
 msgstr ""
 
+#: ../plugin.py:71
 msgid "Cancel"
 msgstr ""
 
+#: ../plugin.py:36
 msgid "Disable Animations"
 msgstr ""
 
+#: ../plugin.py:38
 msgid "Grow drop"
 msgstr ""
 
+#: ../plugin.py:39
 msgid "Grow from left"
 msgstr ""
 
+#: ../plugin.py:40
 msgid "Popup"
 msgstr ""
 
+#: ../plugin.py:74
 msgid "Preview"
 msgstr ""
 
+#: ../plugin.py:72
 msgid "Save"
 msgstr ""
 
+#: ../plugin.py:73
 msgid "Setting"
 msgstr ""
 
+#: ../plugin.py:37
 msgid "Simple fade"
 msgstr ""
 
+#: ../plugin.py:41
 msgid "Slide drop"
 msgstr ""
 
+#: ../plugin.py:42
 msgid "Slide left to right"
 msgstr ""
 
+#: ../plugin.py:43
 msgid "Slide top to bottom"
 msgstr ""
 
+#: ../plugin.py:44
 msgid "Stripes"
 msgstr ""

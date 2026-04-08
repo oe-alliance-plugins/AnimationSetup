@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenATV\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-06 19:27+0430\n"
+"POT-Creation-Date: 2026-04-05 18:55+0200\n"
 "PO-Revision-Date: 2021-06-08 02:32+0300\n"
 "Last-Translator: tomppaa <http://www.huoltovalikko.com/>\n"
 "Language-Team: tomppaa\n"
@@ -13,56 +13,74 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.0\n"
 
+#: ../plugin.py:70
 msgid "* current animation"
 msgstr "* nykyinen animaatio"
 
+#: ../setup.xml
+msgid "Adjust the speed of UI animations"
+msgstr ""
+
+#: ../setup.xml
 msgid "Animation Setup"
 msgstr "Animation Asetukset"
 
+#: ../setup.xml
 msgid "Animation Speed"
 msgstr "Animation Nopeus"
 
+#: ../plugin.py:132
 msgid "Animations"
 msgstr "Animaatiot"
 
+#: ../plugin.py:71
 msgid "Cancel"
 msgstr "Peruuta"
 
-msgid "Default"
-msgstr "Oletus"
-
+#: ../plugin.py:36
 msgid "Disable Animations"
 msgstr "Poista animaatiot käytöstä"
 
+#: ../plugin.py:38
 msgid "Grow drop"
 msgstr "Kasvava pudotus"
 
+#: ../plugin.py:39
 msgid "Grow from left"
 msgstr "Kasvata vasemmalta"
 
+#: ../plugin.py:40
 msgid "Popup"
 msgstr "Ponnahdusikkuna"
 
+#: ../plugin.py:74
 msgid "Preview"
 msgstr "Esikatselu"
 
+#: ../plugin.py:72
 msgid "Save"
 msgstr "Tallenna"
 
+#: ../plugin.py:73
 msgid "Setting"
 msgstr "Asetukset"
 
+#: ../plugin.py:37
 msgid "Simple fade"
 msgstr "Yksinkertainen haalistuminen"
 
+#: ../plugin.py:41
 msgid "Slide drop"
 msgstr "Dian pudotus"
 
+#: ../plugin.py:42
 msgid "Slide left to right"
 msgstr "Liu'uta vasemmalta oikealle"
 
+#: ../plugin.py:43
 msgid "Slide top to bottom"
 msgstr "Liu'uta ylhäältä alas"
 
+#: ../plugin.py:44
 msgid "Stripes"
 msgstr "Raidat"

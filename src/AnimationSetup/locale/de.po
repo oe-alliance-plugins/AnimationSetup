@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-16 19:01+0430\n"
+"POT-Creation-Date: 2026-04-05 18:55+0200\n"
 "PO-Revision-Date: 2018-10-10 23:37+0200\n"
 "Last-Translator: Manfred Aabye <openmanniland@gmx.de>\n"
 "Language-Team: \n"
@@ -18,56 +18,74 @@ msgstr ""
 "X-Generator: Poedit 2.2\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: ../plugin.py:70
 msgid "* current animation"
 msgstr "* aktuelle Animation"
 
+#: ../setup.xml
+msgid "Adjust the speed of UI animations"
+msgstr ""
+
+#: ../setup.xml
 msgid "Animation Setup"
 msgstr "Animation Setup"
 
+#: ../setup.xml
 msgid "Animation Speed"
 msgstr "Animation Geschwindigkeit"
 
+#: ../plugin.py:132
 msgid "Animations"
 msgstr "Animationen"
 
+#: ../plugin.py:71
 msgid "Cancel"
 msgstr "Abbrechen"
 
-msgid "Default"
-msgstr "Standard"
-
+#: ../plugin.py:36
 msgid "Disable Animations"
 msgstr "Animationen deaktivieren"
 
+#: ../plugin.py:38
 msgid "Grow drop"
 msgstr "Grow Drop"
 
+#: ../plugin.py:39
 msgid "Grow from left"
 msgstr "Von Links wachsen"
 
+#: ../plugin.py:40
 msgid "Popup"
 msgstr "Popup"
 
+#: ../plugin.py:74
 msgid "Preview"
 msgstr "Vorschau"
 
+#: ../plugin.py:72
 msgid "Save"
 msgstr "Speichern"
 
+#: ../plugin.py:73
 msgid "Setting"
 msgstr "Einstellung"
 
+#: ../plugin.py:37
 msgid "Simple fade"
 msgstr "Einfache Fade"
 
+#: ../plugin.py:41
 msgid "Slide drop"
 msgstr "Rutsch"
 
+#: ../plugin.py:42
 msgid "Slide left to right"
 msgstr "Rutsche links nach rechts"
 
+#: ../plugin.py:43
 msgid "Slide top to bottom"
 msgstr "Rutsche oben nach unten"
 
+#: ../plugin.py:44
 msgid "Stripes"
 msgstr "Streifen"
